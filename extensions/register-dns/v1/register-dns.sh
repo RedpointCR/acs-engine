@@ -36,5 +36,6 @@ fi
 
 # service networking restart
 echo $(date) " - Restarting network"
+nsupdate /var/tmp/nsupdatecmds
 sudo ifdown eth0 && sudo ifup eth0
 sudo systemctl restart networking
